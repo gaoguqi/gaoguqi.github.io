@@ -54,7 +54,7 @@
 <meta property="og:description" content="1. Sublime插件1.1 插件安装：&amp;emsp;&amp;emsp;ctrl+shift+p调出命令面板，输入package control:install package 回车1.2 常用插件：1.2.1 MarkdownEditing 　　&amp;emsp;&amp;emsp;MarkdownEditing 插件用于在Sublime 中编辑md文件。在submlime 中默认是白色的，把Preferences">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-de2e829ad6b60930009b8bd1eb05057c_hd.jpg">
-<meta property="og:updated_time" content="2019-11-21T09:28:46.559Z">
+<meta property="og:updated_time" content="2019-11-25T05:33:13.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;pic1.zhimg.com&#x2F;80&#x2F;v2-de2e829ad6b60930009b8bd1eb05057c_hd.jpg">
 
@@ -198,10 +198,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-21 13:54:02 / 修改时间：17:28:46" itemprop="dateCreated datePublished" datetime="2019-11-21T13:54:02+08:00">2019-11-21</time>
+              <time title="创建时间：2019-11-21 13:54:02" itemprop="dateCreated datePublished" datetime="2019-11-21T13:54:02+08:00">2019-11-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-25 13:33:13" itemprop="dateModified" datetime="2019-11-25T13:33:13+08:00">2019-11-25</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -302,7 +308,7 @@ int main(void)
 <p>效果：<br>我在[北京邮电大学][1] 读书，女朋友在[北京师范大学][2] 读书，我们在[北京大学][3] 上课时认识。<br>[1]: <a href="http://www.bupt.edu.cn" target="_blank" rel="noopener">www.bupt.edu.cn</a> “北邮”<br>[2]: <a href="http://www.bnu.edu.cn" target="_blank" rel="noopener">www.bnu.edu.cn</a> “北师大”<br>[3]: <a href="http://www.pku.edu.cn" target="_blank" rel="noopener">www.pku.edu.cn</a> “北大”</p>
 <p>自动链接：<br>Markdown支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要使用&lt;&gt;包起来，Markdown就会自动把它转为链接。<br>代码：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://www.bupt.edu.cn&gt;</span><br><span class="line">&lt;wangdachui@bupt.edu.cn&gt;</span><br></pre></td></tr></table></figure>
-<p>效果：<br><a href="http://www.bupt.edu.cn" target="_blank" rel="noopener">http://www.bupt.edu.cn</a><br><a href="mailto:&#x77;&#x61;&#x6e;&#x67;&#x64;&#x61;&#99;&#x68;&#117;&#x69;&#64;&#98;&#117;&#112;&#x74;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;">&#x77;&#x61;&#x6e;&#x67;&#x64;&#x61;&#99;&#x68;&#117;&#x69;&#64;&#98;&#117;&#112;&#x74;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;</a></p>
+<p>效果：<br><a href="http://www.bupt.edu.cn" target="_blank" rel="noopener">http://www.bupt.edu.cn</a><br><a href="mailto:&#119;&#97;&#110;&#x67;&#100;&#x61;&#99;&#x68;&#x75;&#105;&#x40;&#98;&#117;&#112;&#x74;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;">&#119;&#97;&#110;&#x67;&#100;&#x61;&#99;&#x68;&#x75;&#105;&#x40;&#98;&#117;&#112;&#x74;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;</a></p>
 <h3 id="2-6-插入图片"><a href="#2-6-插入图片" class="headerlink" title="2.6 插入图片"></a>2.6 插入图片</h3><p>图片的语法类似链接。alt text是替换文本；在图像无法显示时才呈现出来。<br>行内形式：  </p>
 <p>代码：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">alt text</span>](<span class="link">https://pic1.zhimg.com/80/v2-de2e829ad6b60930009b8bd1eb05057c_hd.jpg "图片"</span>)</span><br></pre></td></tr></table></figure>
@@ -352,6 +358,12 @@ int main(void)
 <li>找到 <code>HKEY_CLASSES_ROOT\Applications\sublime_text.exe\shell\open\command</code>   </li>
 <li>打开 <code>command</code> 修改数据里面的路径名称，我这里面的值还为原来 <code>Sublime Text2</code>的安装路径，更改为新的路径。</li>
 </ol>
+<h3 id="4-2-设置Sublime-Text为右键选择项目"><a href="#4-2-设置Sublime-Text为右键选择项目" class="headerlink" title="4.2 设置Sublime Text为右键选择项目"></a>4.2 设置Sublime Text为右键选择项目</h3><ol>
+<li>cmd-&gt;regedit 打开注册表</li>
+<li>在 计算机\HKEY_CLASSES_ROOT*\shell 下面添加项Edit with Sublime 然后在该项下，添加字符串Icon，其数值数据设置为”C:\Program Files\Sublime Text 3\sublime_text.exe,0” ，sublime.exe的本地安装位置。</li>
+<li>然后在 Edit with Sublime 继续新建项目Command,Command项目下默认值修改为”C:\Program Files\Sublime Text 3\sublime_text.exe %1”。设置完成后，确定退出。现在右键菜单栏中就有了。</li>
+<li></li>
+</ol>
 
     </div>
 
@@ -373,6 +385,9 @@ int main(void)
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+                <a href="/2019/11/21/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="prev" title="linux常用命令">
+                  linux常用命令 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -411,7 +426,7 @@ int main(void)
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Sublime插件"><span class="nav-number">1.</span> <span class="nav-text">1. Sublime插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-插件安装："><span class="nav-number">1.1.</span> <span class="nav-text">1.1 插件安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-常用插件："><span class="nav-number">1.2.</span> <span class="nav-text">1.2 常用插件：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-MarkdownEditing"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 MarkdownEditing 　　</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-MarkdownPreview"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 MarkdownPreview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-MarkdownLivePreview-在编辑器中实时预览"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 MarkdownLivePreview 在编辑器中实时预览</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Markdown语法"><span class="nav-number">2.</span> <span class="nav-text">2. Markdown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一级标题"><span class="nav-number"></span> <span class="nav-text">第一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二级标题"><span class="nav-number">1.</span> <span class="nav-text">第二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三级标题"><span class="nav-number">1.1.</span> <span class="nav-text">第三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第四级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">第四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第五级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">第五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#第六级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">第六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一阶标题"><span class="nav-number"></span> <span class="nav-text">第一阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶标题"><span class="nav-number">1.</span> <span class="nav-text">第二阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-倾斜加粗删除下划线"><span class="nav-number">1.1.</span> <span class="nav-text">2.2 倾斜加粗删除下划线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-引用"><span class="nav-number">1.2.</span> <span class="nav-text">2.3 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-插入代码"><span class="nav-number">1.3.</span> <span class="nav-text">2.4 插入代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-分割线："><span class="nav-number">2.</span> <span class="nav-text">Markdown 分割线：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-插入图片"><span class="nav-number">2.1.</span> <span class="nav-text">2.6 插入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-列表"><span class="nav-number">2.2.</span> <span class="nav-text">2.7 列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#３-常用快捷键"><span class="nav-number">3.</span> <span class="nav-text">３. 常用快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-shift-space"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 shift+space</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-常见问题"><span class="nav-number">4.</span> <span class="nav-text">4. 常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Sublime-Text-不能被设置为默认打开方式"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Sublime Text 不能被设置为默认打开方式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Sublime插件"><span class="nav-number">1.</span> <span class="nav-text">1. Sublime插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-插件安装："><span class="nav-number">1.1.</span> <span class="nav-text">1.1 插件安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-常用插件："><span class="nav-number">1.2.</span> <span class="nav-text">1.2 常用插件：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-MarkdownEditing"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 MarkdownEditing 　　</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-MarkdownPreview"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 MarkdownPreview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-MarkdownLivePreview-在编辑器中实时预览"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 MarkdownLivePreview 在编辑器中实时预览</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Markdown语法"><span class="nav-number">2.</span> <span class="nav-text">2. Markdown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一级标题"><span class="nav-number"></span> <span class="nav-text">第一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二级标题"><span class="nav-number">1.</span> <span class="nav-text">第二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三级标题"><span class="nav-number">1.1.</span> <span class="nav-text">第三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第四级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">第四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第五级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">第五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#第六级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">第六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一阶标题"><span class="nav-number"></span> <span class="nav-text">第一阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶标题"><span class="nav-number">1.</span> <span class="nav-text">第二阶标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-倾斜加粗删除下划线"><span class="nav-number">1.1.</span> <span class="nav-text">2.2 倾斜加粗删除下划线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-引用"><span class="nav-number">1.2.</span> <span class="nav-text">2.3 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-插入代码"><span class="nav-number">1.3.</span> <span class="nav-text">2.4 插入代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-分割线："><span class="nav-number">2.</span> <span class="nav-text">Markdown 分割线：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-插入图片"><span class="nav-number">2.1.</span> <span class="nav-text">2.6 插入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-列表"><span class="nav-number">2.2.</span> <span class="nav-text">2.7 列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#３-常用快捷键"><span class="nav-number">3.</span> <span class="nav-text">３. 常用快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-shift-space"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 shift+space</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-常见问题"><span class="nav-number">4.</span> <span class="nav-text">4. 常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Sublime-Text-不能被设置为默认打开方式"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Sublime Text 不能被设置为默认打开方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-设置Sublime-Text为右键选择项目"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 设置Sublime Text为右键选择项目</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -425,7 +440,7 @@ int main(void)
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
