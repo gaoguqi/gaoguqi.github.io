@@ -46,17 +46,17 @@
   };
 </script>
 
-  <meta name="description" content="1. 常见问题1.1 提示无法执行脚本错误powershell中不能执行脚本，提示‘because running scripts is disabled on this system’原因：powershell中默认的Execution policy 是restricted，使用Get-ExecutionPolicy查看">
+  <meta name="description" content="jsp本质就是Servlet，tomcat接收到请求，找到jsp先转为Servlet.java 然后编译。JSP语法： JSP代码块 在JSP中嵌入Java代码 &amp;lt;% java代码 %&amp;gt; JSP声明构造块 &amp;lt;%! 声明语句%&amp;gt; &amp;lt;%! public int add(int a, int b){return a+b} %&amp;gt; JSP输出指令 显示java代码执行的结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows PowerShell使用指南">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;21&#x2F;Windows-PowerShell%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97&#x2F;index.html">
+<meta property="og:title" content="JSP学习笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;JSP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="高古奇">
-<meta property="og:description" content="1. 常见问题1.1 提示无法执行脚本错误powershell中不能执行脚本，提示‘because running scripts is disabled on this system’原因：powershell中默认的Execution policy 是restricted，使用Get-ExecutionPolicy查看">
+<meta property="og:description" content="jsp本质就是Servlet，tomcat接收到请求，找到jsp先转为Servlet.java 然后编译。JSP语法： JSP代码块 在JSP中嵌入Java代码 &amp;lt;% java代码 %&amp;gt; JSP声明构造块 &amp;lt;%! 声明语句%&amp;gt; &amp;lt;%! public int add(int a, int b){return a+b} %&amp;gt; JSP输出指令 显示java代码执行的结">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-25T05:39:23.171Z">
+<meta property="og:updated_time" content="2019-12-04T15:48:36.634Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/11/21/Windows-PowerShell%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+<link rel="canonical" href="http://yoursite.com/2019/12/04/JSP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -70,7 +70,7 @@
   };
 </script>
 
-  <title>Windows PowerShell使用指南 | 高古奇</title>
+  <title>JSP学习笔记 | 高古奇</title>
   
 
 
@@ -174,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/21/Windows-PowerShell%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/JSP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Windows PowerShell使用指南
+          JSP学习笔记
         </h1>
 
         <div class="post-meta">
@@ -196,16 +196,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-11-21 20:59:05" itemprop="dateCreated datePublished" datetime="2019-11-21T20:59:05+08:00">2019-11-21</time>
+              <time title="创建时间：2019-12-04 23:38:36 / 修改时间：23:48:36" itemprop="dateCreated datePublished" datetime="2019-12-04T23:38:36+08:00">2019-12-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-25 13:39:23" itemprop="dateModified" datetime="2019-11-25T13:39:23+08:00">2019-11-25</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -225,9 +219,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-常见问题"><a href="#1-常见问题" class="headerlink" title="1. 常见问题"></a>1. 常见问题</h2><h3 id="1-1-提示无法执行脚本错误"><a href="#1-1-提示无法执行脚本错误" class="headerlink" title="1.1 提示无法执行脚本错误"></a>1.1 提示无法执行脚本错误</h3><p>powershell中不能执行脚本，提示‘because running scripts is disabled on this system’<br>原因：<br>powershell中默认的Execution policy 是restricted，使用Get-ExecutionPolicy查看</p><a id="more"></a>
-<p>解决方法：<br>管理员权限打开powershell,设置Execution policy为Remotesigned</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+        <p>jsp本质就是Servlet，tomcat接收到请求，找到jsp先转为Servlet.java 然后编译。<br>JSP语法：</p><ol>
+<li>JSP代码块 在JSP中嵌入Java代码 &lt;% java代码 %&gt;</li>
+<li>JSP声明构造块 &lt;%! 声明语句%&gt; &lt;%! public int add(int a, int b){return a+b} %&gt;</li>
+<li>JSP输出指令 显示java代码执行的结果 &lt;%= 表达式或者变量%&gt; 等于 &lt;% out.println%&gt;</li>
+<li>JSP处理指令 jsp提供辅助信息 &lt;%@ jsp指令%&gt; 例如 &lt;%@ page import=”java.util.*” %&gt;<br>&lt;%@ page %&gt; 定义当前jsp页面全局设置<br>&lt;%@ include %&gt; 将其他jsp页面与当前JSP页面合并<br>&lt;%@ taglib %&gt; 引入JSP标签库<br>JSP注释：<br>&lt;%– –%&gt; JSP 注释<br>// /<em>..</em>/ 注释java代码<!-- html --> html注释，被注释的语句不会被浏览器解析
+
+</li>
+</ol>
     </div>
 
     
@@ -240,17 +239,14 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/21/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="next" title="linux常用命令">
-                  <i class="fa fa-chevron-left"></i> linux常用命令
+                <a href="/2019/12/04/Servlet%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="Servlet学习笔记">
+                  <i class="fa fa-chevron-left"></i> Servlet学习笔记
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/23/%E4%BC%98%E5%8C%96%E4%BD%A0%E7%9A%84%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88/" rel="prev" title="优化你的投资组合">
-                  优化你的投资组合 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -289,7 +285,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-常见问题"><span class="nav-number">1.</span> <span class="nav-text">1. 常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-提示无法执行脚本错误"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 提示无法执行脚本错误</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
