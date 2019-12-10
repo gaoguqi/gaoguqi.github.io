@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="高古奇">
 <meta property="og:description" content="html form中的action属性就是表单提交以后发送的地址是什么，一般就是servlet的完整路径或者相对路径，http:&#x2F;&#x2F;localhost:8080 不需要填写。接收用户参数，两个方法：1、request.getParameter() 接收单个参数2、request.getParameterValues() 接收多个同名参数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-05T08:21:47.972Z">
+<meta property="og:updated_time" content="2019-12-08T14:44:52.537Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/04/Servlet%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -204,7 +204,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-05 16:21:47" itemprop="dateModified" datetime="2019-12-05T16:21:47+08:00">2019-12-05</time>
+                <time title="修改时间：2019-12-08 22:44:52" itemprop="dateModified" datetime="2019-12-08T22:44:52+08:00">2019-12-08</time>
               </span>
 
           
@@ -232,7 +232,13 @@
 <p>jsp本质就是Servlet，tomcat接收到请求，找到jsp先转为Servlet.java 然后编译。</p>
 <p>ContentType决定浏览器采用何种方式对响应体进行处理<br>text/html html文档<br>text/plain 纯文本<br>image/jpeg 图片资源<br>text/xml xml文档</p>
 <p>请求转发与页面重定向</p>
-
+<p>Tomcat默认字符集是ISO-8859-9,西欧字符集<br>Servlet中请求与响应都要设置UTF-8字符集以支持中文。</p>
+<p>对于post请求响应体处理，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br></pre></td></tr></table></figure>
+<p>对于get请求发送的中文，tomcat 8之后版本默认get请求发送中文就是utf-8格式，无需转换；<br>之前版本在文件C:\coding\server\apache-tomcat-9.0.27\conf\server.xml中修改为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Connector port="8080" protocol="HTTP/1.1"</span><br><span class="line">               connectionTimeout="20000"</span><br><span class="line">               redirectPort="8443" URIEncoding="UTF-8"/&gt;</span><br></pre></td></tr></table></figure>
+<p>对于响应response的中文乱码处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -307,7 +313,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

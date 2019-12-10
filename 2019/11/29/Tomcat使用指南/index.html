@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="高古奇">
 <meta property="og:description" content="tomcat放到服务器上访问8080端口还需要输入端口号，造成访问不便，好多人需要换成80端口。改变端口号很简单，在tomcat&#x2F;conf&#x2F;server.xml里面改变port的值就可以。123&amp;lt;Connector URIEncoding=&amp;quot;UTF-8&amp;quot; port=&amp;quot;8080&amp;quot; protocol=&amp;quot;HTTP&#x2F;1.1&amp;quot;connecti">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-29T08:45:59.949Z">
+<meta property="og:updated_time" content="2019-12-09T12:18:00.383Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/29/Tomcat%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
@@ -196,10 +196,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-29 16:42:18 / 修改时间：16:45:59" itemprop="dateCreated datePublished" datetime="2019-11-29T16:42:18+08:00">2019-11-29</time>
+              <time title="创建时间：2019-11-29 16:42:18" itemprop="dateCreated datePublished" datetime="2019-11-29T16:42:18+08:00">2019-11-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-09 20:18:00" itemprop="dateModified" datetime="2019-12-09T20:18:00+08:00">2019-12-09</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -223,7 +229,11 @@
 
 <p>按理说就这样就可以，但是改成80后，用<code>service tomcat restart</code>,重启tomcat，<br>用<code>netstat -nlp</code>查看端口，发现没有80端口，<br>原来是在lunix下，非root用户不能监听1024以上的端口号，<br>这个tomcat服务器就没办法绑定在80端口下，<br>所以这里需要使用linux的端口转发机制，<br>把到80端口的服务请求都转到8080端口上。</p>
 <p>iptables -t nat -A PREROUTING -p tcp –dport 80 -j REDIRECT –to-port 8080<br>保存<br>service iptables save<br>这样就可以访问80端口了。</p>
-<p>可以看到它的配置文件在/etc/tomcat8下，启动文件在/usr/share/tomcat8下<br>但是我们常见的webapps在哪里？其实它是在/var/lib/tomcat8下面，cd /var/lib/tomcat8后，我们可以看到熟悉的webapps文件夹。<br>cd 到/etc/tomcat8下可以看到tomcat全局配置文件。</p>
+<p>可以看到它的配置文件在/etc/tomcat8下，启动文件在/usr/share/tomcat8下<br>但是我们常见的webapps在哪里？其实它是在/var/lib/tomcat8下面，cd /var/lib/tomcat8后，我们可以看到熟悉的webapps文件夹。<br>cd 到/etc/tomcat8下可以看到tomcat全局配置文件。<br>Tomcat会自动对war包进行解压缩<br>Tomcat默认字符集是ISO-8859-9,西欧字符集</p>
+<p>idea调试运行时，生成的工程文件存放在<code>C:\Users\gaota\.IntelliJIdea2019.2\system\tomcat\Tomcat_9_0_27_clcun</code>目录下</p>
+<p>如果要在localhost后面取消输入上下文目录直接访问应用，在tomcat service.xml中做如下配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"C:\coding\server\apache-tomcat-9.0.27\webapps\clcun"</span> <span class="attr">reloadable</span>=<span class="string">"true"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>path=&quot;/&quot;</code>表示将应用的目录映射为应用服务器上的根目录</p>
 
     </div>
 
@@ -299,7 +309,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
