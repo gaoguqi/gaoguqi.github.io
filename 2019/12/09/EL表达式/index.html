@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="EL（Expression Language）表达式语言，用于简化JSP的输出格式：${表达式} 取代out学生姓名：${student.name}12&amp;lt;h1&amp;gt;姓名：$&amp;#123;requestScope.student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;&amp;lt;h1&amp;gt;评级：$&amp;#123;requestScope.grade&amp;#125;&amp;lt;&#x2F;h1&amp;gt;">
+  <meta name="description" content="EL（Expression Language）表达式语言，用于简化JSP的输出格式：${表达式} 取代out1&amp;lt;h1&amp;gt;学生姓名：$&amp;#123;student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;12&amp;lt;h1&amp;gt;姓名：$&amp;#123;requestScope.student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;&amp;lt;h1&amp;gt;评级：$&amp;#123;requestSco">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EL表达式">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;EL%E8%A1%A8%E8%BE%BE%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="高古奇">
-<meta property="og:description" content="EL（Expression Language）表达式语言，用于简化JSP的输出格式：${表达式} 取代out学生姓名：${student.name}12&amp;lt;h1&amp;gt;姓名：$&amp;#123;requestScope.student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;&amp;lt;h1&amp;gt;评级：$&amp;#123;requestScope.grade&amp;#125;&amp;lt;&#x2F;h1&amp;gt;">
+<meta property="og:description" content="EL（Expression Language）表达式语言，用于简化JSP的输出格式：${表达式} 取代out1&amp;lt;h1&amp;gt;学生姓名：$&amp;#123;student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;12&amp;lt;h1&amp;gt;姓名：$&amp;#123;requestScope.student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;&amp;lt;h1&amp;gt;评级：$&amp;#123;requestSco">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T15:35:32.537Z">
+<meta property="og:updated_time" content="2019-12-10T15:42:46.353Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
@@ -204,7 +204,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-10 23:35:32" itemprop="dateModified" datetime="2019-12-10T23:35:32+08:00">2019-12-10</time>
+                <time title="修改时间：2019-12-10 23:42:46" itemprop="dateModified" datetime="2019-12-10T23:42:46+08:00">2019-12-10</time>
               </span>
 
           
@@ -225,7 +225,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>EL（Expression Language）表达式语言，用于简化JSP的输出<br>格式：${表达式} 取代out</p><h1>学生姓名：${student.name}</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>姓名：$&#123;requestScope.student.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>评级：$&#123;requestScope.grade&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>EL（Expression Language）表达式语言，用于简化JSP的输出<br>格式：${表达式} 取代out</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>学生姓名：$&#123;student.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>姓名：$&#123;requestScope.student.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>评级：$&#123;requestScope.grade&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+
+<p>requestScope作用域对象。EL表达式内置四种作用域对象：</p>
+<ol>
+<li>pageScope 从当前页面取值</li>
+<li>requestScope 从当前请求中获取属性值</li>
+<li>sessionScope 从当前会话中获取属性值</li>
+<li>applicationScope 从当前应用中获取全局属性值</li>
+</ol>
+<p>书写时可以不写作用域对象，el将按上面四个作用域对象依次查找。</p>
+
     </div>
 
     
@@ -284,7 +297,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">学生姓名：${student.name}</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
