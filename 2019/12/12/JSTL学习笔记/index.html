@@ -46,17 +46,17 @@
   };
 </script>
 
-  <meta name="description" content="危险之旅 作者 瓦兰 生活重复着危险的旅行 你不止一次地迷失于歧途 顶峰的灯盏遽然黯淡 在没有神灵的异乡行走 在过错中过了一生 在不为人知的地方悴然死去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="高古奇">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;about&#x2F;index.html">
+  <meta name="description" content="JSTL JSP standard tag library JSP标准标签库核心标签库-core格式化输出标签库-fmtsql操作标签库-sqlxml操作标签库-xml函数标签库-functionsjsp页面中添加使用核心标签库1&amp;lt;%@taglib prefix=&quot;c&quot; uri=&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSTL学习笔记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="高古奇">
-<meta property="og:description" content="危险之旅 作者 瓦兰 生活重复着危险的旅行 你不止一次地迷失于歧途 顶峰的灯盏遽然黯淡 在没有神灵的异乡行走 在过错中过了一生 在不为人知的地方悴然死去">
+<meta property="og:description" content="JSTL JSP standard tag library JSP标准标签库核心标签库-core格式化输出标签库-fmtsql操作标签库-sqlxml操作标签库-xml函数标签库-functionsjsp页面中添加使用核心标签库1&amp;lt;%@taglib prefix=&quot;c&quot; uri=&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-11T02:52:36.711Z">
+<meta property="og:updated_time" content="2019-12-12T08:55:00.005Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/about/">
+<link rel="canonical" href="http://yoursite.com/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -64,14 +64,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title> | 高古奇
-  </title>
+  <title>JSTL学习笔记 | 高古奇</title>
   
 
 
@@ -166,54 +165,96 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JSTL学习笔记
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2019-12-12 13:37:39 / 修改时间：16:55:00" itemprop="dateCreated datePublished" datetime="2019-12-12T13:37:39+08:00">2019-12-12</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>JSTL JSP standard tag library JSP标准标签库<br>核心标签库-core<br>格式化输出标签库-fmt<br>sql操作标签库-sql<br>xml操作标签库-xml<br>函数标签库-functions<br>jsp页面中添加使用核心标签库</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@taglib</span> <span class="attr">prefix</span>=<span class="string">"c"</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+
+<p>指定的是lib-&gt;中taglibs-standard-impl-1.2.5.jar/META-INF/c.tld的 <code>&lt;uri&gt;http://java.sun.com/jsp/jstl/core&lt;/uri&gt;</code></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="EL表达式">
+                  <i class="fa fa-chevron-left"></i> EL表达式
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/12/12/idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" rel="prev" title="idea使用指南">
+                  idea使用指南 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <center>
-
-<p><strong>危险之旅</strong></p>
-<p>作者 瓦兰</p>
-<p>生活重复着危险的旅行</p>
-<p>你不止一次地迷失于歧途</p>
-<p>顶峰的灯盏遽然黯淡</p>
-<p>在没有神灵的异乡行走</p>
-<p>在过错中过了一生</p>
-<p>在不为人知的地方悴然死去</p>
-</center>
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
   </div>
 
 

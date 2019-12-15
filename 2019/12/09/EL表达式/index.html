@@ -53,7 +53,7 @@
 <meta property="og:site_name" content="高古奇">
 <meta property="og:description" content="EL（Expression Language）表达式语言，用于简化JSP的输出格式：${表达式} 取代out1&amp;lt;h1&amp;gt;学生姓名：$&amp;#123;student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;12&amp;lt;h1&amp;gt;姓名：$&amp;#123;requestScope.student.name&amp;#125;&amp;lt;&#x2F;h1&amp;gt;&amp;lt;h1&amp;gt;评级：$&amp;#123;requestSco">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T15:42:46.353Z">
+<meta property="og:updated_time" content="2019-12-13T15:40:27.409Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
@@ -204,7 +204,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-10 23:42:46" itemprop="dateModified" datetime="2019-12-10T23:42:46+08:00">2019-12-10</time>
+                <time title="修改时间：2019-12-13 23:40:27" itemprop="dateModified" datetime="2019-12-13T23:40:27+08:00">2019-12-13</time>
               </span>
 
           
@@ -235,9 +235,10 @@
 <li>pageScope 从当前页面取值</li>
 <li>requestScope 从当前请求中获取属性值</li>
 <li>sessionScope 从当前会话中获取属性值</li>
-<li>applicationScope 从当前应用中获取全局属性值</li>
+<li>applicationScope 从当前应用中获取全局属性值 应用程序全局也就是ServletContext</li>
 </ol>
 <p>书写时可以不写作用域对象，el将按上面四个作用域对象依次查找。</p>
+<p>对于请求体或者URL中的参数：EL表达式内置param对象来简化参数的输出，语法${para.参数名}</p>
 
     </div>
 
@@ -259,6 +260,9 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+                <a href="/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="JSTL学习笔记">
+                  JSTL学习笔记 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -310,7 +314,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
