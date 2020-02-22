@@ -171,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/23/%E6%8A%95%E8%B5%84%E7%AC%94%E8%AE%B0-%E6%B0%B8%E8%BE%89%E8%B6%85%E5%B8%82/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/Maven%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -185,7 +185,207 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/12/23/%E6%8A%95%E8%B5%84%E7%AC%94%E8%AE%B0-%E6%B0%B8%E8%BE%89%E8%B6%85%E5%B8%82/" class="post-title-link" itemprop="url">投资笔记-永辉超市</a>
+            <a href="/2020/01/07/Maven%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Maven学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-07 23:43:04" itemprop="dateCreated datePublished" datetime="2020-01-07T23:43:04+08:00">2020-01-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-22 13:20:57" itemprop="dateModified" datetime="2020-02-22T13:20:57+08:00">2020-02-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Maven-介绍"><a href="#Maven-介绍" class="headerlink" title="Maven 介绍"></a>Maven 介绍</h3><p>Maven为java项目提供了统一的管理方式，对软件项目提供构建与依赖管理。<br>解决的痛点：</p><p>1. </p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/Spring%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/07/Spring%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Spring学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-07 22:54:16" itemprop="dateCreated datePublished" datetime="2020-01-07T22:54:16+08:00">2020-01-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-22 13:16:09" itemprop="dateModified" datetime="2020-02-22T13:16:09+08:00">2020-02-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Spring对象的创建和依赖关系维护"><a href="#Spring对象的创建和依赖关系维护" class="headerlink" title="Spring对象的创建和依赖关系维护"></a>Spring对象的创建和依赖关系维护</h3><p>面向切面编程AOP<br>IOC底层原理<br>面向接口编程：<br>第一阶段：UserService us = new UserSeervice();s//定义类和创建类对象<br>第二阶段：面向接口编程<br>UserService[这是个接口] us = new UserServiceImp()【接口实现】; //这就是耦合，因为如果要换一个实现，就要修改此处代码<br>第三阶段：<br>ocp原则，open-close原则，对程序扩展时open的，对修改程序代码是close。尽量不修改程序的源码，实现对程序的扩展。<br>使用工厂模式，工厂类创建实例对象。<br>Class FactoryBean{<br>    public UserService getUs(){<br>        return new UserServiceImp();<br>    }<br>}<br>UserService us = FactoryBean.getUs();//这样可以使UserService us和UserServiceImp解耦合，但是UserService却又和FactoryBean耦合了。<br>第四阶段：工厂+反射+配置文件<br><bean id="us" class="com.clcun.UserServiceImpl"><br>class FactoryBean{<br>    public static Object getBean(String id)<br>    {<br>        //根据id 找到class 然后反射创建Class类<br>    }<br>}</bean></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/06/%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">交易记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-06 10:54:48" itemprop="dateCreated datePublished" datetime="2020-01-06T10:54:48+08:00">2020-01-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-04 11:29:59" itemprop="dateModified" datetime="2020-02-04T11:29:59+08:00">2020-02-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>2020-01-06</strong></p><p>今天早盘永辉先是一个急跌，7.76跌到7.69，然后开始飙升，我看到飙升到8.14回本后就想卖一些，最后8.10卖了200手，今日最高点达到了8.25。如果能卖在最高点，能多卖3000块。下午一度回落到低点8.03，如果我后悔了买回来也可以做个3000元的T。</p><p>但是不要着急；我没有做T的智慧和心态。<br>不要计较于几百几千的损失和利得；<br>不要在意一分一毛的涨幅。<br>杀伐决断，坚定隐忍。<br>草蛇灰线，伏延千里。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/06/%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/javascript%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/06/javascript%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">javascript学习</a>
         </h1>
 
         <div class="post-meta">
@@ -196,7 +396,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-12-23 11:44:01 / 修改时间：16:15:51" itemprop="dateCreated datePublished" datetime="2019-12-23T11:44:01+08:00">2019-12-23</time>
+              <time title="创建时间：2020-01-06 09:53:16 / 修改时间：09:54:07" itemprop="dateCreated datePublished" datetime="2020-01-06T09:53:16+08:00">2020-01-06</time>
             </span>
 
           
@@ -210,218 +410,581 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>以2019年11月26日为基准记录:</strong></p><table>
+          <p>##常见问题<br>###赋值异常</p><ol>
+<li>Uncaught TypeError: Cannot set property ‘src’ of null 可能是id写错了，页面上没有该元素。</li>
+</ol>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/05/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/05/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">验证码的实现</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-05 21:05:44" itemprop="dateCreated datePublished" datetime="2020-01-05T21:05:44+08:00">2020-01-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/05/Freemarker%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/05/Freemarker%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" class="post-title-link" itemprop="url">Freemarker模板引擎</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-05 18:49:43" itemprop="dateCreated datePublished" datetime="2020-01-05T18:49:43+08:00">2020-01-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/05/Listener%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/05/Listener%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Listener学习</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-05 11:11:03" itemprop="dateCreated datePublished" datetime="2020-01-05T11:11:03+08:00">2020-01-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/04/2020%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gao Guqi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高古奇">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/2020%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">2020消费记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-04 21:58:26" itemprop="dateCreated datePublished" datetime="2020-01-04T21:58:26+08:00">2020-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-15 16:16:18" itemprop="dateModified" datetime="2020-01-15T16:16:18+08:00">2020-01-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>FROM 2020-01-01:</strong></p><table>
 <thead>
 <tr>
 <th align="center">日期</th>
-<th align="right">资金净流入</th>
-<th align="right">当日成交</th>
-<th align="right">收盘价</th>
-<th align="right">20日净流入</th>
-<th align="right">10日净流入</th>
-<th align="right">5日净流入</th>
-<th align="right">3日净流入</th>
+<th align="right">摘要</th>
+<th align="right">对象别</th>
+<th align="right">明细</th>
+<th align="right">金额</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">20191223</td>
-<td align="right">+2.03亿</td>
-<td align="right">8.07亿</td>
-<td align="right">7.71</td>
-<td align="right">-7576.14万</td>
-<td align="right">+3.45亿</td>
-<td align="right">+2.08亿</td>
-<td align="right">2.25亿</td>
+<td align="center">20200115</td>
+<td align="right">运动</td>
+<td align="right">GT</td>
+<td align="right">京东购买羽毛球鞋子一双</td>
+<td align="right">231</td>
 </tr>
 <tr>
-<td align="center">20191220</td>
-<td align="right">+2952.84万</td>
-<td align="right"></td>
-<td align="right">7.55</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200115</td>
+<td align="right">垫付</td>
+<td align="right">GT</td>
+<td align="right">永辉超市购买活动奖品</td>
+<td align="right">120.23</td>
 </tr>
 <tr>
-<td align="center">20191219</td>
-<td align="right">-736.00万</td>
-<td align="right"></td>
-<td align="right">7.57</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200115</td>
+<td align="right">垫付</td>
+<td align="right">GT</td>
+<td align="right">京东购买活动用气球</td>
+<td align="right">8.9</td>
 </tr>
 <tr>
-<td align="center">20191218</td>
-<td align="right">-5803.60万</td>
-<td align="right"></td>
-<td align="right">7.60</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200115</td>
+<td align="right">垫付</td>
+<td align="right">GT</td>
+<td align="right">京东购买活动用春联</td>
+<td align="right">310.4</td>
 </tr>
 <tr>
-<td align="center">20191217</td>
-<td align="right">+4105.01万</td>
-<td align="right"></td>
-<td align="right">7.68</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200115</td>
+<td align="right">党费</td>
+<td align="right">GT</td>
+<td align="right">党费</td>
+<td align="right">43.3</td>
 </tr>
 <tr>
-<td align="center">20191216</td>
-<td align="right">-836.37万</td>
-<td align="right"></td>
-<td align="right">7.61</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200114</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">体检后去吃肯德基早餐</td>
+<td align="right">13.8</td>
 </tr>
 <tr>
-<td align="center">20191213</td>
-<td align="right">-3.42万</td>
-<td align="right"></td>
-<td align="right">7.57</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200113</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">9.5</td>
 </tr>
 <tr>
-<td align="center">20191212</td>
-<td align="right">-7691.21万</td>
-<td align="right"></td>
-<td align="right">7.54</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200113</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">6.8</td>
 </tr>
 <tr>
-<td align="center">20191211</td>
-<td align="right">+3481.19万</td>
-<td align="right"></td>
-<td align="right">7.59</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200111</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">31</td>
 </tr>
 <tr>
-<td align="center">20191210</td>
-<td align="right">+1.88亿</td>
-<td align="right"></td>
-<td align="right">7.49</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200111</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">121</td>
 </tr>
 <tr>
-<td align="center">20191209</td>
-<td align="right">-8706.55万</td>
-<td align="right"></td>
-<td align="right">7.18</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200111</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">永辉超市采购食物</td>
+<td align="right">55.3</td>
 </tr>
 <tr>
-<td align="center">20191206</td>
-<td align="right">-393.69万</td>
-<td align="right"></td>
-<td align="right">7.29</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200110</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">9</td>
 </tr>
 <tr>
-<td align="center">20191205</td>
-<td align="right">-9749.85万</td>
-<td align="right"></td>
-<td align="right">7.34</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200110</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">永辉超市采购食物</td>
+<td align="right">25.72</td>
 </tr>
 <tr>
-<td align="center">20191204</td>
-<td align="right">-3138.36万</td>
-<td align="right"></td>
-<td align="right">7.38</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200110</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">8.8</td>
 </tr>
 <tr>
-<td align="center">20191203</td>
-<td align="right">-499.07万</td>
-<td align="right"></td>
-<td align="right">7.45</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200109</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">京东采购零食</td>
+<td align="right">80.18</td>
 </tr>
 <tr>
-<td align="center">20191202</td>
-<td align="right">-457.46万</td>
-<td align="right"></td>
-<td align="right">7.40</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200109</td>
+<td align="right">运动消费</td>
+<td align="right">GT</td>
+<td align="right">羽毛球</td>
+<td align="right">85</td>
 </tr>
 <tr>
-<td align="center">20191129</td>
-<td align="right">+167.95万</td>
-<td align="right"></td>
-<td align="right">7.43</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200109</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">14.5</td>
 </tr>
 <tr>
-<td align="center">20191128</td>
-<td align="right">+1313.24万</td>
-<td align="right"></td>
-<td align="right">7.47</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200109</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">15</td>
 </tr>
 <tr>
-<td align="center">20191127</td>
-<td align="right">-9557.79万</td>
-<td align="right"></td>
-<td align="right">7.47</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200109</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">6.1</td>
 </tr>
 <tr>
-<td align="center">20191126</td>
-<td align="right">-1.11亿</td>
-<td align="right"></td>
-<td align="right">7.68</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
+<td align="center">20200108</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td align="center">20200108</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">肯德基咖啡</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="center">20200108</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">7.5</td>
+</tr>
+<tr>
+<td align="center">20200108</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午KFC咖啡饭</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">10.5</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">利息</td>
+<td align="right">GT</td>
+<td align="right">支付2019年度广发贷款利息1571.88元，剩余待还112694.54</td>
+<td align="right">1571.88</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">利息</td>
+<td align="right">GT</td>
+<td align="right">支付2019年度支付宝借呗利息839.06元</td>
+<td align="right">839.06</td>
+</tr>
+<tr>
+<td align="center">20200107</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">7.1</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">KFC咖啡</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">垫付</td>
+<td align="right">GT</td>
+<td align="right">垫付照片打印</td>
+<td align="right">160</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">通讯</td>
+<td align="right">GT</td>
+<td align="right">手机充值200元</td>
+<td align="right">200</td>
+</tr>
+<tr>
+<td align="center">20200106</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">4.6</td>
+</tr>
+<tr>
+<td align="center">20200105</td>
+<td align="right">通讯</td>
+<td align="right">GT</td>
+<td align="right">手机充值200元</td>
+<td align="right">200</td>
+</tr>
+<tr>
+<td align="center">20200104</td>
+<td align="right">衣服</td>
+<td align="right">YY</td>
+<td align="right">商场购物</td>
+<td align="right">198</td>
+</tr>
+<tr>
+<td align="center">20200104</td>
+<td align="right">衣服</td>
+<td align="right">YY</td>
+<td align="right">商场购物</td>
+<td align="right">549</td>
+</tr>
+<tr>
+<td align="center">20200104</td>
+<td align="right">衣服</td>
+<td align="right">YY</td>
+<td align="right">商场购物</td>
+<td align="right">163</td>
+</tr>
+<tr>
+<td align="center">20200104</td>
+<td align="right">邮费</td>
+<td align="right">GT</td>
+<td align="right">给YY顺丰快递寄鞋子</td>
+<td align="right">32</td>
+</tr>
+<tr>
+<td align="center">20200104</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">永辉超市采购食物</td>
+<td align="right">83.02</td>
+</tr>
+<tr>
+<td align="center">20200103</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">早饭</td>
+<td align="right">4.6</td>
+</tr>
+<tr>
+<td align="center">20200103</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">午饭</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="center">20200103</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">永辉超市采购酸奶水果蔬菜火腿、日用品</td>
+<td align="right">142.97</td>
+</tr>
+<tr>
+<td align="center">20200101</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">必胜客披萨加班餐</td>
+<td align="right">56.10</td>
+</tr>
+<tr>
+<td align="center">20200101</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">咖啡</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="center">20200101</td>
+<td align="right">餐饮</td>
+<td align="right">GT</td>
+<td align="right">晚饭</td>
+<td align="right">11.5</td>
 </tr>
 </tbody></table>
       
@@ -442,7 +1005,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/css%E5%AE%9A%E4%BD%8D/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/03/Filter%E8%BF%87%E6%BB%A4%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -456,330 +1019,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/12/22/css%E5%AE%9A%E4%BD%8D/" class="post-title-link" itemprop="url">css定位</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-22 23:11:18 / 修改时间：23:28:29" itemprop="dateCreated datePublished" datetime="2019-12-22T23:11:18+08:00">2019-12-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>position:relatve 相对 absolute 绝对 static 无定位 fixed 固定<br>相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。<br>偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)</p>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/17/ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/17/ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">ajax学习笔记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-17 00:00:46 / 修改时间：11:19:53" itemprop="dateCreated datePublished" datetime="2019-12-17T00:00:46+08:00">2019-12-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Asynchronous Javascript And XML (异步的javascript 和 XML)<br>对页面数据进行局部刷新<br>创建XMLHttpRequest对象<br>发送Ajax请求<br>服务器处理完成后返回响应，通过javascript对响应进行处理</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btnLoad"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"加载"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"divContent"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementById(<span class="string">"btnLoad"</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">//创建XMLHttpRequest对象</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> xmlhttp;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span></span><br><span class="line"><span class="actionscript">            xmlhttp = <span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line"><span class="actionscript">        &#125;<span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">            <span class="comment">//IE5 IE6浏览器版本</span></span></span><br><span class="line"><span class="actionscript">            xmlhttp = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(xmlhttp);<span class="comment">//查看xmlhttp的属性</span></span></span><br><span class="line"><span class="actionscript">        <span class="comment">//发送Ajax请求</span></span></span><br><span class="line"><span class="actionscript">        xmlhttp.open(<span class="string">"GET"</span>, <span class="string">"/jquery/ajax/content"</span>, <span class="literal">true</span>);<span class="comment">//创建请求,true表示异步</span></span></span><br><span class="line"><span class="actionscript">          <span class="comment">//同步的时候，send方法一直处于阻塞状态，必须等服务器返回信息后才往下执行</span></span></span><br><span class="line"><span class="actionscript">        xmlhttp.send();<span class="comment">//发送请求</span></span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">//服务器处理完成后返回响应，通过javascript对响应进行处理</span></span></span><br><span class="line"><span class="actionscript">        <span class="comment">//事件用于监听ajax的执行状态，1 请求未初始化，1服务器连接建立了，2请求已经被接收，3请求正在处理，4响应文本已经被接收</span></span></span><br><span class="line"><span class="actionscript">        <span class="comment">//响应状态码xmlhttp.status200 成功，404 未扎到</span></span></span><br><span class="line"><span class="actionscript">         <span class="comment">//如果选择了同步，onreadystatechange将失效</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//onreadystatechange专门给异步使用，只有当状态发生变化时，将调用onreadystatechange里面的函数</span></span></span><br><span class="line"><span class="actionscript">        xmlhttp.onreadystatechange = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line">            if(xmlhttp.readyState==4&amp;&amp; xmlhttp.status == 200)&#123;</span><br><span class="line"><span class="actionscript">                <span class="keyword">var</span> t= xmlhttp.responseText;</span></span><br><span class="line">                alert(t);</span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.getElementById(<span class="string">"divContent"</span>).innerHTML=t;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/17/ajax%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/jquery%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/16/jquery%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">jquery学习</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-16 18:34:33 / 修改时间：23:59:42" itemprop="dateCreated datePublished" datetime="2019-12-16T18:34:33+08:00">2019-12-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>属性选择器：<br>$(“a[href=’<a href="http://www.clcun.com&#39;]&quot;" target="_blank" rel="noopener">http://www.clcun.com&#39;]&quot;</a>) 选择属性值为clcun的超链接<br>$(“a[href^=’<a href="http://mail.&#39;]&quot;" target="_blank" rel="noopener">http://mail.&#39;]&quot;</a>) 选择属性值前缀为<a href="http://mail.的超链接" target="_blank" rel="noopener">http://mail.的超链接</a><br>$(“a[href$=’edu.cn’]”) 选择属性值结尾为edu.cn的超链接<br>$(“a[href*=’edu.cn’]”) 选择属性值包含edu.cn的超链接</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/16/jquery%E5%AD%A6%E4%B9%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/json%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/15/json%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">json学习</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-15 20:58:41 / 修改时间：21:15:07" itemprop="dateCreated datePublished" datetime="2019-12-15T20:58:41+08:00">2019-12-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>JSON.parse() 字符串转为json对象<br>JSON.stringfy() 将对象转换为字符串</p>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/%E8%83%86%E5%A4%A7%E5%BF%83%E7%BB%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/12/%E8%83%86%E5%A4%A7%E5%BF%83%E7%BB%86/" class="post-title-link" itemprop="url">胆大心细</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-12 18:00:07 / 修改时间：18:01:52" itemprop="dateCreated datePublished" datetime="2019-12-12T18:00:07+08:00">2019-12-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>当竞争与敌视同你比邻而居时，谨慎就会茁壮成长(格拉西安)</li>
-<li>诸葛一生惟谨慎，吕端大事不糊涂</li>
-<li>调和怒时气，谨慎喜中言，斟酌醉后酒，爱惜有时钱</li>
-<li>谨慎是勇敢的一部分(西班牙)</li>
-<li>艰难之日要坚定，顺利之日要谨慎(蒙古)</li>
-<li>浅河要当深渡(日本)</li>
-<li>用时不爱惜，就要损坏;做时不慎重，就要失败(蒙古族)</li>
-<li>加倍小心总是好的(法国)</li>
-<li>谨慎是智慧的长子(法国)</li>
-<li>慎重对待问题就是智慧的一半(英国)</li>
-<li>一盎司的小心值一磅的学问(英国)</li>
-<li>严谨慎重，智慧之母(德国)</li>
-<li>谨慎比其余任何智能使用得更频繁。日常生活中的草率事件使它发挥作用，对微小的事情产生影响</li>
-<li>慎在于畏小，智在于治大(尉缭子)</li>
-<li>祸难入慎家之门</li>
-<li>篱笆扎得紧，野狗不进来</li>
-</ul>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/12/idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">idea使用指南</a>
+            <a href="/2020/01/03/Filter%E8%BF%87%E6%BB%A4%E5%99%A8/" class="post-title-link" itemprop="url">Filter过滤器</a>
         </h1>
 
         <div class="post-meta">
@@ -789,14 +1029,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-12-12 15:51:12" itemprop="dateCreated datePublished" datetime="2019-12-12T15:51:12+08:00">2019-12-12</time>
+              <time title="创建时间：2020-01-03 15:26:43" itemprop="dateCreated datePublished" datetime="2020-01-03T15:26:43+08:00">2020-01-03</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-15 22:18:09" itemprop="dateModified" datetime="2019-12-15T22:18:09+08:00">2019-12-15</time>
+                <time title="修改时间：2020-01-04 23:50:05" itemprop="dateModified" datetime="2020-01-04T23:50:05+08:00">2020-01-04</time>
               </span>
 
           
@@ -810,47 +1050,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
-<li>ctrl+alt+s 调出settings面板:Editor-&gt;General-&gt;CodeCompletion-&gt;Match case 勾选去掉，可以将自动提示的大小写匹配去掉;KeyMap-&gt;MainMenu-&gt;Code-&gt;Completion-&gt;Basic可以设置智能提示，比如设置为ctrl+j</li>
-<li>自动生成get和set alt + insert 键 ctrl + a 选中所有属性</li>
-<li>ctrl+shift+a 调出查找面板 然后输入constructor </li>
-<li>ctrl+左右箭头 跳转完整的单词</li>
-<li>ctrl+shift+enter 自动完成当前行 加上分号或者换行</li>
-<li>alt+insert generate constructor getter setter</li>
-<li>ctrl+insert 复制当前行</li>
-<li>ctrl+alt+l 格式化代码</li>
-<li>ctrl+shift+/ 注释</li>
-<li>ctrl+alt+shift+j 列操作 一次性把当前文件所有同名的单词或者句子选中，进行修改</li>
-<li>shift+f6  重命名 选择后按shift+f6 只对修改有影响的所有变量进行修改</li>
-<li>ctrl+w 选中单词</li>
-<li>ctrl+shift+f/r 全局查找和替换</li>
-<li>ctrl+shift+n 文件查找面板</li>
-<li>sout live template</li>
-<li>输入new ArrayList&lt;&gt;(); 按ctrl+alt+v 自动定义变量如下<pre><code>ArrayList&lt;String&gt; strings = new ArrayList&lt;&gt;();</code></pre></li>
-<li>ctrl + shift+f10 运行程序</li>
-<li>ctrl+e 最近访问的文件列表</li>
-<li>ctrl+shift+e 最近编辑过的文件</li>
-<li>ctrl+shift+1-9 创建书签</li>
-<li>shift+f11 查看所有书签</li>
-<li>ctrl+1-9 切换书签</li>
-<li>alt + 左右箭头 切换页签</li>
-<li>ctrl+g 跳转到行</li>
-<li>//模板live template<br>//psvm<br>//sout<br>//psfs<br>//fori<br>//itli</li>
-<li>shift+f9 调试</li>
-<li>shift+f10 运行</li>
-<li>shift+ctrl+f8 查看所有断点</li>
-<li>f8 单步运行 f9恢复运行至下一个断点</li>
-<li>ctrl+alt+enter 上方插入行</li>
-<li>shift+enter 下方插入行</li>
-<li>ctrl+alt+v 自动抽取并生成变量</li>
-<li>clt+enter show context actions 比如添加try catch等</li>
-<li>ctrl+alt+j surround with live complate</li>
-<li>ctrl_alt+t surround with while if try catch</li>
-<li>alt+shift+enter 导入包</li>
-</ol>
+          <p>Filter从客户端浏览器向tomcat发来的请求进行统一拦截处理，也对响应进行处理，应用程序层面进行全局处理。</p><p>任何过滤器都必须实现Filter接口<br>doFilter()编写过滤器功能代码<br>在web.xml中对过滤器进行设置，说明拦截URL范围</p><p>Filter生命周期<br>tomat启动时，Filter对象会被创建，并立即执行Filter.init()方法，对当前过滤器进行初始化。<br>之后，每来一个请求，Filter.doFilter()提供服务，例如安全检查等；<br>tomcat重启或者关闭时，执行Filter.destroy()。<br>过滤器全局有且只有一个对象，启动时被创建。单例多线程来处理高并发请求，线程之间没有相互影响。<br>Filter配置形式<br>web.xml中配置</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/12/12/idea%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/#more" rel="contents">
+              <a class="btn" href="/2020/01/03/Filter%E8%BF%87%E6%BB%A4%E5%99%A8/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -874,7 +1077,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -888,73 +1091,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">JSTL学习笔记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-12 13:37:39 / 修改时间：16:55:00" itemprop="dateCreated datePublished" datetime="2019-12-12T13:37:39+08:00">2019-12-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>JSTL JSP standard tag library JSP标准标签库<br>核心标签库-core<br>格式化输出标签库-fmt<br>sql操作标签库-sql<br>xml操作标签库-xml<br>函数标签库-functions<br>jsp页面中添加使用核心标签库</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@taglib</span> <span class="attr">prefix</span>=<span class="string">"c"</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/12/JSTL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">EL表达式</a>
+            <a href="/2019/12/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">正则表达式</a>
         </h1>
 
         <div class="post-meta">
@@ -964,14 +1101,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-12-09 20:19:47" itemprop="dateCreated datePublished" datetime="2019-12-09T20:19:47+08:00">2019-12-09</time>
+              <time title="创建时间：2019-12-24 22:30:52" itemprop="dateCreated datePublished" datetime="2019-12-24T22:30:52+08:00">2019-12-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-13 23:40:27" itemprop="dateModified" datetime="2019-12-13T23:40:27+08:00">2019-12-13</time>
+                <time title="修改时间：2019-12-25 15:46:16" itemprop="dateModified" datetime="2019-12-25T15:46:16+08:00">2019-12-25</time>
               </span>
 
           
@@ -985,73 +1122,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>EL（Expression Language）表达式语言，用于简化JSP的输出<br>格式：${表达式} 取代out</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>学生姓名：$&#123;student.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>姓名：$&#123;requestScope.student.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>评级：$&#123;requestScope.grade&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/09/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gao Guqi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="高古奇">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/09/JSP%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">JSP内置对象</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-09 19:22:55 / 修改时间：19:25:52" itemprop="dateCreated datePublished" datetime="2019-12-09T19:22:55+08:00">2019-12-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>request 请求对象 HttpServletReuqest<br>response 响应对象 HttpServletResponse<br>session 用户会话 HttpSession<br>application 应用全局对象 ServletContext<br>out 输出对象 PrintWriter<br>page 当前页面对象 this<br>pageContext 页面上下文对象 PageContext<br>config 应用配置对象 ServletConfig<br>exception 应用异常对象 Throwable</p>
+          <p><a href="https://tool.oschina.net/regex" target="_blank" rel="noopener">https://tool.oschina.net/regex</a> 在线正则表达式测试<br>字符范围匹配<br>A 精准匹配单个字符<br>x|y 允许出现的2个字符<br>[xyz] 字符集合，允许出现集合内任意</p>
       
     </div>
 
@@ -1070,7 +1141,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1114,7 +1185,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1148,7 +1219,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

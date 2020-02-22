@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="position:relatve 相对 absolute 绝对 static 无定位 fixed 固定相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)">
+  <meta name="description" content="position:relatve 相对 absolute 绝对 static 无定位 fixed 固定相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)相对定位一般用于包含其它子元素，配合其它子元素的显示效果。绝对定位：参照物是最近的祖先元素，如果没有祖先元素就是以body作为参">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css定位">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;22&#x2F;css%E5%AE%9A%E4%BD%8D&#x2F;index.html">
 <meta property="og:site_name" content="高古奇">
-<meta property="og:description" content="position:relatve 相对 absolute 绝对 static 无定位 fixed 固定相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)">
+<meta property="og:description" content="position:relatve 相对 absolute 绝对 static 无定位 fixed 固定相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)相对定位一般用于包含其它子元素，配合其它子元素的显示效果。绝对定位：参照物是最近的祖先元素，如果没有祖先元素就是以body作为参">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-22T15:28:29.271Z">
+<meta property="og:updated_time" content="2019-12-23T14:43:53.134Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/12/22/css%E5%AE%9A%E4%BD%8D/">
@@ -196,10 +196,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-22 23:11:18 / 修改时间：23:28:29" itemprop="dateCreated datePublished" datetime="2019-12-22T23:11:18+08:00">2019-12-22</time>
+              <time title="创建时间：2019-12-22 23:11:18" itemprop="dateCreated datePublished" datetime="2019-12-22T23:11:18+08:00">2019-12-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-23 22:43:53" itemprop="dateModified" datetime="2019-12-23T22:43:53+08:00">2019-12-23</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -219,7 +225,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>position:relatve 相对 absolute 绝对 static 无定位 fixed 固定<br>相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。<br>偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)</p>
+        <p>position:relatve 相对 absolute 绝对 static 无定位 fixed 固定<br>相对定位：偏移参考元素是元素本身不会使元素脱离文档流。元素的初始位置占据的空间会被保留。<br>偏移left或者top。相对的是自己以前的(0,0)位置，偏移(left,top)<br>相对定位一般用于包含其它子元素，配合其它子元素的显示效果。<br>绝对定位：参照物是最近的祖先元素，如果没有祖先元素就是以body作为参照物<br>position:absolute 脱离了文档流</p><a id="more"></a>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;<span class="comment">/*必须有position确定参照物,否则top和left不生效*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#123456</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>固定定位：相对于浏览器窗口进行定位，就是滚动条变化也不会改变显示位置。<br>position:fixed</p>
+
     </div>
 
     
@@ -294,7 +303,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -328,7 +337,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
